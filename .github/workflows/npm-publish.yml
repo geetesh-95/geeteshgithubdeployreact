@@ -3,12 +3,12 @@ on: push
 env:
   AZURE_WEBAPP_NAME: GeeteshReactApp1 # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: 'build'  # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '14.x'                # set this to the node version to use
+  NODE_VERSION: '12.x'                # set this to the node version to use
 
 jobs:
   build-and-deploy:
     name: Build and Deploy
-    runs-on: linux-10
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ env.NODE_VERSION }}
